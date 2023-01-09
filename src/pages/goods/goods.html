@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Rochester&display=swap"
+      rel="stylesheet"
+    />
+    <title>Online-store</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="header-logo" href="/index.html">
+        <img class="header-logo-image" src="./header/christmas-ball.png" alt="christmas-ball" />
+        <p class="header-logo-text">Online shop</p>
+      </a>
+      <p class="header-total">Общая сумма: 300 руб.</p>
+      <a class="header-cart" href="/shoppingCart.html">
+        <img class="header-cart-image" src="./header/cart.png" alt="christmas-cart" />
+        <div class="header-cart-quantity">1</div>
+      </a>
+    </header>
+    <main class="main">
+      <section class="path">
+        <a class="store" href="index.html">Магазин</a>
+        <a class="array" href="#"> >>>> </a>
+        <a class="store-category" href="#"></a>
+        <a class="array" href="#"> >>>> </a>
+        <a class="store-brand" href="#"></a>
+        <a class="array" href="#"> >>>> </a>
+        <a class="store-name" href="#"></a>
+      </section>
+      <section class="card">
+        <div class="card-info">
+          <h3 class="card-title">Настольная голубая елка в мешочке Верона 60 см</h3>
+          <div class="card-column">
+            <div class="card-image">
+              <img class="card-image-big" src="./id1.jpg" alt="goods" />
+              <div class="card-image-small">
+                <img class="card-image-small-1" src="./id1.jpg" alt="goods" />
+                <img class="card-image-small-2" src="./id1_1.jpg" alt="goods" />
+              </div>
+            </div>
+            <div class="card-details">
+              <div class="card-brand">
+                <div>Брэнд:</div>
+                <div class="card-brand-details">Beatrees</div>
+              </div>
+              <div class="card-category">
+                <div>Категория:</div>
+                <div class="card-category-details">Искусственные елки</div>
+              </div>
+              <div class="card-cost">
+                <div>Цена (в рублях):</div>
+                <div class="card-cost-details">2030</div>
+              </div>
+              <div class="card-quantity">
+                <div>Количество на складе:</div>
+                <div class="card-quantity-details">7</div>
+              </div>
+              <div class="card-description">
+                <div>Описание:</div>
+                <div class="card-description-details">
+                  Ель закреплена на устойчивой подставке в виде декоративного мешочка, которая позволяет расположить ее
+                  на столе, подоконнике или в любом удобном для вас месте. Эта модель елки не требует сборки, достаточно
+                  просто достать ее из упаковки и слегка распушить ветви - и ваша новогодняя красавица готова радовать
+                  вас и ваших близких!
+                </div>
+              </div>
+              <div class="info-btn">
+                <button class="btn btn-cart">Добавить в корзину</button>
+                <button class="btn btn-now">Купить сейчас</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <secion class="section-form">
+        <form action="" name="callback" class="formes">
+          <div class="formes-field">
+            <input
+              type="text"
+              class="formes-name"
+              name="name"
+              placeholder="Имя и Фамилия*"
+              pattern="[А-Яа-я]{3,20}\s[А-Яа-я]{3,20}(\s[А-Яа-я]{3,20})*"
+              title="Укажите имя и фамилию. Минимальная длина- 3 буквы для каждого слова"
+              required
+            />
+            <span></span>
+          </div>
+          <div class="formes-field">
+            <input
+              type="text"
+              class="formes-address"
+              name="address"
+              placeholder="Адрес*"
+              pattern="[А-Яа-я]{5,20}\s[А-Яа-я]{5,20}\s[А-Яа-я]{5,20}(\s[А-Яа-я]{5,20})*"
+              title="Укажите адрес. Минимальная длина- 3 слова по 5 букв"
+              required
+            />
+          </div>
+          <div class="formes-field">
+            <input type="email" class="formes-email" name="email" placeholder="E-Mail" required />
+          </div>
+          <div class="formes-field">
+            <input
+              type="tel"
+              class="formes-phone"
+              name="phone"
+              placeholder="Телефон"
+              autofocus="autofocus"
+              required="required"
+              pattern="\+7\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+              placeholder="+7(___)___-__-__"
+              title="Укажите телефон в формате +7(___)___-__-__"
+              minlength="9"
+              required
+            />
+          </div>
+          <button type="submit">Далее</button>
+        </form>
+      </secion>
+      <section class="formes-card">
+        <form class="formes-container">
+          <div class="field-container">
+            <label for="name">Name</label>
+            <input
+              id="name"
+              maxlength="20"
+              type="text"
+              placeholder="Имя и Фамилия*"
+              pattern="[A-Za-z]{3,20}\s[A-Za-z]{3,20}"
+              title="Укажите имя и фамилию. Минимальная длина- 3 буквы для каждого слова на латинице "
+              required
+            />
+          </div>
+          <div class="field-container">
+            <label for="cardnumber">Card number</label>
+            <img src="./Rabbit.png" alt="Pay system" />
+            <input
+              id="cardnumber"
+              type="text"
+              placeholder="Номер карты*"
+              pattern="[3-5][0-9]{15}"
+              title="Укажите номер карты. Первые цифры 3, 4 или 5 в зависимости от платежной системы"
+              required
+            />
+          </div>
+          <div class="field-container">
+            <label for="expirationdate">Expiration (mm/yy)</label>
+            <input
+              id="expirationdate"
+              type="text"
+              pattern="(^[0][1-9][\/][2-9][0-9]$|^[1][0-2][\/][2-9][0-9]$)"
+              placeholder="Дата окончания*"
+              title="Укажите дату окончания mm/yy"
+              required
+            />
+          </div>
+          <div class="field-container">
+            <label for="securitycode">Security Code</label>
+            <input
+              id="securitycode"
+              type="text"
+              pattern="[0-9]{3}"
+              placeholder="Код безопасности*"
+              title="Укажите код безопасности. Длина 3 символа"
+              required
+            />
+          </div>
+          <button type="submit">Оплатить</button>
+        </form>
+      </section>
+      <section class="end-order">
+        <div class="end-order-wrapper">Заказ завершен</div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a href="https://rs.school/js/">
+        <img src="./footer/logo-rsschool3.png" alt="logo" class="footer-logo" />
+      </a>
+      <p class="footer-year">2022</p>
+      <div class="footer-github">
+        <div class="footer-link">
+          <img src="./footer/github.png" class="footer-link-image" />
+          <a href="https://github.com/nbelchikova" class="footer-link-text">Natalia</a>
+        </div>
+        <div class="footer-link">
+          <img src="./footer/github.png" class="footer-link-image" />
+          <a href="https://github.com/Kunitsa3" class="footer-link-text">Olga</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

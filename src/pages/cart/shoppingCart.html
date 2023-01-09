@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Rochester&display=swap"
+      rel="stylesheet"
+    />
+    <title>Online-store</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a class="header-logo" href="/index.html">
+        <img class="header-logo-image" src="./header/christmas-ball.png" alt="christmas-ball" />
+        <p class="header-logo-text">Online shop</p>
+      </a>
+      <p class="header-total">Общая сумма: 300 руб.</p>
+      <a class="header-cart" href="/shoppingCart.html">
+        <img class="header-cart-image" src="./header/cart.png" alt="christmas-cart" />
+        <div class="header-cart-quantity">1</div>
+      </a>
+    </header>
+    <main class="main">
+      <div>
+        <div class="products-in-cart">
+          <p class="cart-title">Cart</p>
+        </div>
+        <div class="pagination-wrapper">
+          <div class="pagination">
+            <div class="pagination__select">
+              <p id="page" class="pagination__selected">1</p>
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <ul class="pagination__options-wrapper" id="page-options">
+                <li class="pagination__option">1</li>
+                <li class="pagination__option">2</li>
+                <li class="pagination__option">3</li>
+                <li class="pagination__option">4</li>
+                <li class="pagination__option">5</li>
+              </ul>
+            </div>
+            <p class="pagination__text" id="page-number">of 5 pages</p>
+            <div>
+              <svg
+                class="pagination__left-arrow"
+                width="32"
+                height="36"
+                viewBox="0 0 32 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M17.8241 13.2646L13.4485 17.9999L17.8241 22.7352C18.0586 22.9891 18.0586 23.3995 17.8241 23.6533C17.5895 23.9072 17.2103 23.9072 16.9757 23.6533L12.1759 18.459C11.9414 18.2051 11.9414 17.7947 12.1759 17.5409L16.9757 12.3465C17.0927 12.2199 17.2463 12.1562 17.3999 12.1562C17.5535 12.1562 17.7071 12.2199 17.8241 12.3465C18.0586 12.6004 18.0586 13.0107 17.8241 13.2646Z"
+                />
+              </svg>
+              <svg
+                class="pagination__right-arrow"
+                width="32"
+                height="36"
+                viewBox="0 0 32 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M14.1759 13.1083L18.5515 17.8437L14.1759 22.579C13.9414 22.8329 13.9414 23.2432 14.1759 23.4971C14.4105 23.751 14.7897 23.751 15.0243 23.4971L19.8241 18.3027C20.0586 18.0488 20.0586 17.6385 19.8241 17.3846L15.0243 12.1902C14.9073 12.0636 14.7537 12 14.6001 12C14.4465 12 14.2929 12.0636 14.1759 12.1902C13.9414 12.4441 13.9414 12.8545 14.1759 13.1083Z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="pagination">
+            <p class="pagination__text">Items per page</p>
+            <div class="pagination__select">
+              <p id="items-per-page" class="pagination__selected">5</p>
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <ul class="pagination__options-wrapper">
+                <li class="pagination__option">1</li>
+                <li class="pagination__option">2</li>
+                <li class="pagination__option">3</li>
+                <li class="pagination__option">4</li>
+                <li class="pagination__option">5</li>
+              </ul>
+            </div>
+            <p class="pagination__secondary-text">Showing 1-5 of 10 items</p>
+          </div>
+        </div>
+      </div>
+      <div class="total-information">
+        <div class="total-wrapper">
+          <p class="total-title">Общая сумма: <span class="total-price"></span><span class="discount-price"></span></p>
+          <p class="total-title">Общее кол-во товаров: <span class="total-quantity"></span></p>
+        </div>
+        <div class="promo-wrapper">
+          <form class="promo-form">
+            <h2>Введите промокод</h2>
+            <div class="promo-input-wrapper">
+              <input id="promo-input" type="text" placeholder="Введите промокод" />
+              <button class="promo-button">Применить промокод</button>
+            </div>
+            <div class="promo-info"></div>
+          </form>
+          <div class="promo-possible" id="promo-apply">
+            <h2>Примененные промокоды:</h2>
+          </div>
+          <div class="promo-possible">
+            <h2>Возможные промокоды:</h2>
+            <p>-promo1</p>
+            <p>-promo2</p>
+            <p>-promo3</p>
+          </div>
+        </div>
+        <button class="order-button">Заказать</button>
+      </div>
+      <section class="section-form">
+        <form action="" name="callback" class="formes">
+          <div class="btn-close">Закрыть</div>
+          <div class="formes-field">
+            <input
+              type="text"
+              class="formes-name"
+              name="name"
+              placeholder="Имя и Фамилия*"
+              pattern="[А-Яа-я]{3,20}\s[А-Яа-я]{3,20}(\s[А-Яа-я]{3,20})*"
+              title="Укажите имя и фамилию. Минимальная длина- 3 буквы для каждого слова"
+              required
+            />
+            <span></span>
+          </div>
+          <div class="formes-field">
+            <input
+              type="text"
+              class="formes-address"
+              name="address"
+              placeholder="Адрес*"
+              pattern="[А-Яа-я]{5,20}\s[А-Яа-я]{5,20}\s[А-Яа-я]{5,20}(\s[А-Яа-я]{5,20})*"
+              title="Укажите адрес. Минимальная длина- 3 слова по 5 букв"
+              required
+            />
+          </div>
+          <div class="formes-field">
+            <input type="email" class="formes-email" name="email" placeholder="E-Mail" required />
+          </div>
+          <div class="formes-field">
+            <input
+              type="tel"
+              class="formes-phone"
+              name="phone"
+              placeholder="Телефон"
+              autofocus="autofocus"
+              required="required"
+              pattern="\+7\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+              placeholder="+7(___)___-__-__"
+              title="Укажите телефон в формате +7(___)___-__-__"
+              minlength="9"
+              required
+            />
+          </div>
+          <button type="submit">Далее</button>
+        </form>
+      </section>
+      <section class="formes-card">
+        <form class="formes-container">
+          <div class="btn-close-container">Закрыть</div>
+          <div class="field-container">
+            <label for="name">Name</label>
+            <input
+              id="name"
+              maxlength="20"
+              type="text"
+              placeholder="Имя и Фамилия*"
+              pattern="[A-Za-z]{3,20}\s[A-Za-z]{3,20}"
+              title="Укажите имя и фамилию. Минимальная длина- 3 буквы для каждого слова на латинице "
+              required
+            />
+          </div>
+          <div class="field-container">
+            <label for="cardnumber">Card number</label>
+            <img src="./Rabbit.png" alt="Pay system" />
+            <input
+              id="cardnumber"
+              type="text"
+              placeholder="Номер карты*"
+              pattern="[3-5][0-9]{15}"
+              title="Укажите номер карты. Первые цифры 3, 4 или 5 в зависимости от платежной системы"
+              required
+            />
+          </div>
+          <div class="field-container">
+            <label for="expirationdate">Expiration (mm/yy)</label>
+            <input
+              id="expirationdate"
+              type="text"
+              pattern="(^[0][1-9][\/][2-9][0-9]$|^[1][0-2][\/][2-9][0-9]$)"
+              placeholder="Дата окончания*"
+              title="Укажите дату окончания mm/yy"
+              required
+            />
+          </div>
+          <div class="field-container">
+            <label for="securitycode">Security Code</label>
+            <input
+              id="securitycode"
+              type="text"
+              pattern="[0-9]{3}"
+              placeholder="Код безопасности*"
+              title="Укажите код безопасности. Длина 3 символа"
+              required
+            />
+          </div>
+          <button type="submit">Оплатить</button>
+        </form>
+      </section>
+      <section class="end-order">
+        <div class="end-order-wrapper">Заказ завершен</div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a href="https://rs.school/js/">
+        <img src="./footer/logo-rsschool3.png" alt="logo" class="footer-logo" />
+      </a>
+      <p class="footer-year">2022</p>
+      <div class="footer-github">
+        <div class="footer-link">
+          <img src="./footer/github.png" class="footer-link-image" />
+          <a href="https://github.com/nbelchikova" class="footer-link-text">Natalia</a>
+        </div>
+        <div class="footer-link">
+          <img src="./footer/github.png" class="footer-link-image" />
+          <a href="https://github.com/Kunitsa3" class="footer-link-text">Olga</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

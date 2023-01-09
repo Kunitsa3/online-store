@@ -1,0 +1,62 @@
+.header {
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $main;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+
+  &-logo {
+    display: flex;
+    align-items: center;
+    z-index: 11;
+
+    &-image {
+      width: 90px;
+    }
+
+    &-text {
+      margin-left: 10px;
+      font-family: Rochester, sans-serif;
+      font-size: 72px;
+      color: $white;
+      z-index: 11;
+    }
+  }
+
+  &-total {
+    font-size: 24px;
+    color: $white;
+  }
+
+  &-cart {
+    position: relative;
+    z-index: 11;
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &-image {
+      width: 80px;
+    }
+
+    &-quantity {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 11px;
+      left: -16px;
+      font-size: 23px;
+    }
+  }
+}

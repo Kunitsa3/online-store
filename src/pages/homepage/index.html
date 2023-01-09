@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Rochester&display=swap"
+      rel="stylesheet"
+    />
+    <title>Online-store</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="header-logo" href="/index.html">
+        <img class="header-logo-image" src="./header/christmas-ball.png" alt="christmas-ball" />
+        <p class="header-logo-text">Online shop</p>
+      </a>
+      <p class="header-total">Общая сумма: 300 руб.</p>
+      <a class="header-cart" href="/shoppingCart.html">
+        <img class="header-cart-image" src="./header/cart.png" alt="christmas-cart" />
+        <div class="header-cart-quantity">1</div>
+      </a>
+    </header>
+    <main class="main">
+      <div class="wrapper wrapper-main">
+        <section class="slider">
+          <div class="array-left">
+            <img src="./left.png" alt="array-left" class="array-left-img" />
+          </div>
+          <div class="array-right">
+            <img src="./right.png" alt="array-right" class="array-right-img" />
+          </div>
+          <div class="slider-items">
+            <img src="./slide1.jpg" alt="slider-items" class="slider-items-img" />
+            <img src="./slide2.png" alt="slider-items" class="slider-items-img" />
+            <img src="./slide3.jpg" alt="slider-items" class="slider-items-img" />
+            <img src="./slide4.jpg" alt="slider-items" class="slider-items-img" />
+            <img src="./slide5.png" alt="slider-items" class="slider-items-img" />
+            <img src="./slide6.jpg" alt="slider-items" class="slider-items-img" />
+            <img src="./slide7.jpg" alt="slider-items" class="slider-items-img" />
+            <img src="./slide8.jpg" alt="slider-items" class="slider-items-img" />
+            <img src="./slide9.jpg" alt="slider-items" class="slider-items-img" />
+          </div>
+        </section>
+        <section class="shop">
+          <div class="shop-filter">
+            <h3 class="shop-filter-title">Фильтр</h3>
+            <form class="form shop-filter-category" id="category-form" action="">
+              <p class="p-filter" id="category">Категория</p>
+              <div class="categories-wrapper"></div>
+            </form>
+            <form class="form shop-filter-brand" id="brand-form" action="">
+              <p class="p-filter" id="brand">Бренд</p>
+              <div class="brands-wrapper"></div>
+            </form>
+            <form>
+              <p class="p-filter">Цена</p>
+              <div id="CostRangeSlider" class="range-slider">
+                <div>
+                  <div class="range-slider-val-left"></div>
+                  <div class="range-slider-val-right"></div>
+                  <div class="range-slider-val-range"></div>
+
+                  <span class="range-slider-handle range-slider-handle-left"></span>
+                  <span class="range-slider-handle range-slider-handle-right"></span>
+
+                  <div class="range-slider-tooltip range-slider-tooltip-left">
+                    <span class="range-slider-tooltip-text"></span>
+                  </div>
+
+                  <div class="range-slider-tooltip range-slider-tooltip-right">
+                    <span class="range-slider-tooltip-text"></span>
+                  </div>
+                </div>
+
+                <input type="range" class="range-slider-input-left" tabindex="0" max="100" min="0" step="1" />
+                <input type="range" class="range-slider-input-right" tabindex="0" max="100" min="0" step="1" />
+              </div>
+            </form>
+            <form>
+              <p class="p-filter">Остаток на складе</p>
+              <div id="WarehouseRangeSlider" class="range-slider">
+                <div>
+                  <div class="range-slider-val-left"></div>
+                  <div class="range-slider-val-right"></div>
+                  <div class="range-slider-val-range"></div>
+
+                  <span class="range-slider-handle range-slider-handle-left"></span>
+                  <span class="range-slider-handle range-slider-handle-right"></span>
+
+                  <div class="range-slider-tooltip range-slider-tooltip-left">
+                    <span class="range-slider-tooltip-text"></span>
+                  </div>
+
+                  <div class="range-slider-tooltip range-slider-tooltip-right">
+                    <span class="range-slider-tooltip-text"></span>
+                  </div>
+                </div>
+
+                <input type="range" class="range-slider-input-left" tabindex="0" max="100" min="0" step="1" />
+                <input type="range" class="range-slider-input-right" tabindex="0" max="100" min="0" step="1" />
+              </div>
+            </form>
+            <button class="btn clear-btn" id="formButton">Очистить</button>
+            <button class="btn copy-btn" id="formButton">Копировать</button>
+          </div>
+          <div class="shop-items">
+            <div class="shop-items-header">
+              <p class="items-quantity-title"></p>
+              <div class="items-quantity">
+                <div class="items-quantity-big">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="items-quantity-small">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+
+              <div class="forms">
+                <form class="cost-filter">
+                  <select class="cost-filter-select" name="costfilter">
+                    <option value="normal">Не выбрано</option>
+
+                    <option value="asc">По возрастанию цены</option>
+                    <option value="desc">По убыванию цены</option>
+                    <option value="ascWare">Количество на складе ↑</option>
+                    <option value="descWare">Количество на складе ↓</option>
+                  </select>
+                </form>
+                <form class="form-input">
+                  <input id="choose" type="text" placeholder="поиск" />
+                </form>
+              </div>
+            </div>
+            <p class="no-products">Товары не найдены</p>
+
+            <div class="good-items"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <a href="https://rs.school/js/">
+        <img src="./footer/logo-rsschool3.png" alt="logo" class="footer-logo" />
+      </a>
+      <p class="footer-year">2022</p>
+      <div class="footer-github">
+        <div class="footer-link">
+          <img src="./footer/github.png" class="footer-link-image" />
+          <a href="https://github.com/nbelchikova" class="footer-link-text">Natalia</a>
+        </div>
+        <div class="footer-link">
+          <img src="./footer/github.png" class="footer-link-image" />
+          <a href="https://github.com/Kunitsa3" class="footer-link-text">Olga</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

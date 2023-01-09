@@ -1,0 +1,78 @@
+.formes {
+  position: fixed;
+  display: none;
+  top: 200px;
+  padding: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 500px;
+  background-color: $main;
+  left: 40%;
+}
+
+.end-order-wrapper {
+  position: fixed;
+  display: none;
+  top: 200px;
+  padding: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  background-color: $main;
+  color: $white;
+  left: 40%;
+  text-align: center;
+}
+
+.formes-field {
+  margin-bottom: 10px;
+}
+
+.formes-error {
+  color: red;
+  text-align: left;
+  font-size: 12px;
+  margin-top: 3px;
+  display: none;
+}
+
+.formes input {
+  outline: none;
+  display: block;
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 2px;
+  border: 0;
+  background-color: $white;
+  color: $main;
+  margin: 0 auto;
+}
+
+input:valid:not(:placeholder-shown) {
+  border-color: green;
+}
+
+input:invalid:not(:placeholder-shown) {
+  border-color: red;
+}
+
+input:invalid:not(:placeholder-shown) + .forms-error {
+  display: block;
+}
+
+.btn-close,
+.btn-close-container {
+  position: absolute;
+  right: 30px;
+  top: 0;
+  color: $white;
+}

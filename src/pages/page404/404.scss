@@ -1,0 +1,41 @@
+@import '../../styles/index';
+
+html {
+  height: 100%;
+}
+
+body {
+  background: url('../../../public/background.jpg') no-repeat;
+  background-size: cover;
+}
+
+.p404 {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 10em;
+  color: $main;
+  position: relative;
+  z-index: 2;
+}
+
+.notfound {
+  text-align: center;
+  color: $main;
+  font-size: 2em;
+  position: relative;
+  z-index: 2;
+}
+
+.notfound a {
+  color: $main;
+  font-size: 0.8em;
+}
+
+.notfound a:hover {
+  color: $blue;
+  text-decoration: none;
+}
+
+.main {
+  margin: 200px auto;
+}
