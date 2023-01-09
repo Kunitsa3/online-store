@@ -23,10 +23,12 @@ export function discount() {
   if (!pApply.length) {
     discountPrice.textContent = `${totalPrice.textContent}`;
     totalPrice.classList.remove('price-discount');
+    discountPrice.style.display = 'none';
   } else {
     const finalCost = (Number(totalPrice.textContent?.split(' ')[0]) * (100 - 10 * pApply.length)) / 100;
     discountPrice.textContent = `${finalCost} руб`;
     totalPrice.classList.add('price-discount');
+    discountPrice.style.display = 'block';
   }
 }
 

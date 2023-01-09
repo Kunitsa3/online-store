@@ -19,10 +19,7 @@ const updateShowingItemsNumber = () => {
 
   let pageValue = +page?.innerText;
 
-  if (pageValue > pagesNumberValue) {
-    page.innerText = String(pagesNumberValue);
-    pageValue = +page?.innerText;
-  }
+
 
   const itemsPerPageValue = +itemsPerPage?.innerText;
   const currentPageFirstItem = +(pageValue * itemsPerPageValue - (itemsPerPageValue - 1));
@@ -34,6 +31,11 @@ const updateShowingItemsNumber = () => {
 
   productsWrapper.innerHTML = '';
   renderCartItems(currentPageFirstItem, currentPageLastItem);
+
+  if (pageValue > pagesNumberValue) {
+    page.innerText = String(pagesNumberValue);
+    pageValue = +page?.innerText;
+  }
 
   addToQueryParams('page', String(pageValue));
   addToQueryParams('items-per-page', String(itemsPerPageValue));
