@@ -91,7 +91,7 @@ const baseConfig = {
       redirects: [
         {
           from: '/*',
-          to: '/index.html',
+          to: '/404.html',
           status: 200,
         },
       ],
