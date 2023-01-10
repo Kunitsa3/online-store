@@ -1,6 +1,7 @@
 // data
-import { addToQueryParams } from '../../../helpers/helpers';
+import { addToQueryParams, updateHeaderTotal } from '../../../helpers/helpers';
 import { routeMain } from '../../../helpers/routes';
+import { paginationInit } from '../../cart/utils/pagination';
 
 const formes = document.querySelector('.formes') as HTMLElement;
 const formesCard = document.querySelector('.formes-card') as HTMLElement;
@@ -27,6 +28,8 @@ export const modifyInput = function () {
 dateExp.addEventListener('input', modifyInput, false);
 
 const goToEndOrder = function (event: SubmitEvent) {
+  const cart = document.querySelector('main') as HTMLInputElement;
+  cart.style.display = 'none';
   localStorage.setItem('cart', JSON.stringify([]));
   formesCard.style.display = 'none';
   endOrder.style.display = 'block';
