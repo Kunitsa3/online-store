@@ -1,4 +1,5 @@
 // data
+import { addToQueryParams } from '../../../helpers/helpers';
 import { routeMain } from '../../../helpers/routes';
 
 const formes = document.querySelector('.formes') as HTMLElement;
@@ -28,6 +29,7 @@ dateExp.addEventListener('input', modifyInput, false);
 const goToEndOrder = function (event: SubmitEvent) {
   formesCard.style.display = 'none';
   endOrder.style.display = 'block';
+  localStorage.setItem('cart', JSON.stringify([]));
   event.preventDefault();
   setTimeout(() => {
     window.location.href = routeMain;
