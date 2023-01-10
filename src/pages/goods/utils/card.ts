@@ -27,9 +27,9 @@ export const modifyInput = function () {
 dateExp.addEventListener('input', modifyInput, false);
 
 const goToEndOrder = function (event: SubmitEvent) {
+  localStorage.setItem('cart', JSON.stringify([]));
   formesCard.style.display = 'none';
   endOrder.style.display = 'block';
-  localStorage.setItem('cart', JSON.stringify([]));
   event.preventDefault();
   setTimeout(() => {
     window.location.href = routeMain;
