@@ -44,7 +44,6 @@ export const renderFiltersAndQuantityBlock = (): void => {
   const sortedItemsArray = itemSort(itemsData);
   const searchedItemsArray = itemSearch(sortedItemsArray);
   const filteredItemsArray = itemFilter(searchedItemsArray);
-  const productsBlockHeader = document.querySelector('.shop-items-header') as HTMLElement;
   const itemsQuantityTitle = document.querySelector('.items-quantity-title') as HTMLElement;
   const copyButton = document.querySelector('.copy-btn') as HTMLElement;
   const noItemsTitle = document.querySelector('.no-products') as HTMLElement;
@@ -56,10 +55,10 @@ export const renderFiltersAndQuantityBlock = (): void => {
   copyButton.style.backgroundColor = '$main';
 
   if (!filteredItemsArray.length) {
-    productsBlockHeader.style.display = 'none';
+    itemsQuantityTitle.style.display = 'none';
     noItemsTitle.style.display = 'flex';
   } else {
-    productsBlockHeader.style.display = 'block';
+    itemsQuantityTitle.style.display = 'block';
     noItemsTitle.style.display = 'none';
   }
 };
