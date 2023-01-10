@@ -1,4 +1,4 @@
-import { addProductToCart, removeProductFromCart } from '../../../helpers/helpers';
+import { addProductToCart, removeProductFromCart, updateHeaderTotal } from '../../../helpers/helpers';
 import { IGoods } from '../../../helpers/item';
 import { paginationInit } from './pagination';
 import { updateTotalAfterCount } from './updateTotal';
@@ -69,6 +69,7 @@ export const addCartItem = (itemDetails: IGoods, quantity: number, itemNumber: n
 
     if (+quantityValue.innerText === 1) {
       paginationInit();
+      updateHeaderTotal();
     } else {
       quantityValue.innerText = String(+quantityValue.innerText - 1);
       const currentPrice = +totalPrice.innerText.split(' ')[2];
