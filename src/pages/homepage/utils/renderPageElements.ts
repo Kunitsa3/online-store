@@ -44,7 +44,7 @@ export const renderFiltersAndQuantityBlock = (): void => {
   const sortedItemsArray = itemSort(itemsData);
   const searchedItemsArray = itemSearch(sortedItemsArray);
   const filteredItemsArray = itemFilter(searchedItemsArray);
-  const productsBlockHeader = document.querySelector('.good-items') as HTMLElement;
+  const productsBlockHeader = document.querySelector('.shop-items-header') as HTMLElement;
   const itemsQuantityTitle = document.querySelector('.items-quantity-title') as HTMLElement;
   const copyButton = document.querySelector('.copy-btn') as HTMLElement;
   const noItemsTitle = document.querySelector('.no-products') as HTMLElement;
