@@ -31,9 +31,9 @@ export const getWordWithEnding = (number: number, word: string): string => {
   return number === 1 ? word : `${word}s`;
 };
 
-export const isProductInCart = (id: number): boolean => {
+export const isProductInCart = (productId: number): boolean => {
   const cartItems = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart') || '') : [];
-  const itemId = [...cartItems].findIndex(({ productId }) => {
+  const itemId = [...cartItems].findIndex(({ id }) => {
     return id === productId;
   });
 
