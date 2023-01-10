@@ -12,13 +12,14 @@ export const renderProducts = (): void => {
   const viewParam = currentUrl.get('view');
   const sortedItemsArray = itemSort(itemsData);
   const searchedItemsArray = itemSearch(sortedItemsArray);
+  const filteredItemsArray = itemFilter(searchedItemsArray);
   const itemSmall = document.querySelector('.items-quantity-small') as HTMLElement;
   const itemBig = document.querySelector('.items-quantity-big') as HTMLElement;
 
   productsWrapper.innerHTML = '';
 
   if (viewParam === 'small') {
-    searchedItemsArray.forEach(itemDetails => {
+    filteredItemsArray.forEach(itemDetails => {
       addProductsSmall(itemDetails);
     });
     itemSmall.classList.add('blue-size');
@@ -26,7 +27,7 @@ export const renderProducts = (): void => {
     itemSmall.classList.remove('main-size');
     itemBig.classList.remove('blue-size');
   } else {
-    searchedItemsArray.forEach(itemDetails => {
+    filteredItemsArray.forEach(itemDetails => {
       addProducts(itemDetails);
     });
     itemBig.classList.add('blue-size');
